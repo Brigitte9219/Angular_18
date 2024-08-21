@@ -9,5 +9,7 @@ import { PersonaComponent } from "../persona/persona.component";
   styleUrl: './personas.component.css'
 })
 export class PersonasComponent {
+  
+  deshabilitar = true;
 
 }
