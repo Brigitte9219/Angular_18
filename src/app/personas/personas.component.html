@@ -6,9 +6,14 @@
             [disabled]="deshabilitar"
             (click)="agregarPersona()"
             >Agregar persona</button>
-            <p *ngIf="mostrar">{{mensaje}} con el título de {{titulo}}</p>
-            <app-persona></app-persona>
+            
+            <p *ngIf="mostrar; else sinPersona">{{mensaje}} con el título de {{titulo}}</p>
 
+            <ng-template #sinPersona>
+                <P>No se ha agregado ninguna persona</P>
+            </ng-template>
+
+            <app-persona></app-persona>
             <label>Título Persona</label>
             <input type="text" class="form-control" [(ngModel)]="titulo">
             {{titulo}}
